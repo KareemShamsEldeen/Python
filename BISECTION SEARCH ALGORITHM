@@ -1,0 +1,19 @@
+print('plz think of a number between 0 and 100')
+low = 0
+high = 100
+med = (low+high)//2
+state = True
+while state:
+    print('Is your secret num' + str(med))
+    g = input(' h for too high / l for too low / c for correct answer:')
+    if g == 'c':
+        print('ur secret num is: ' + str(med))
+        state = False
+    elif g == 'h':
+        high = med
+        med = (low+high)//2
+    elif g == 'l':
+        low = med
+        med = (low+high)//2
+    else:
+        print("wrong input")
